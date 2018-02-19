@@ -1,0 +1,240 @@
+.text-primary {color: @color-blue}
+.text-primary-2 {color: @color-orange}
+
+.landing-page header {
+  height: 200px;
+  background-image: none;
+  background-color: @color-blue;
+}
+
+.nav-tabs > li a {
+  background: rgba(225, 225, 225, 0.5);
+  border-bottom-right-radius: none;
+  border-bottom-left-radius: none;
+}
+.nav-tabs>li.active>a {
+  color: @color-orange;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  color: @color-orange;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    border-color: #eaeaea;
+    color: @color-orange;
+}
+
+.step__img {
+  position: relative;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--1::after {
+    background-image: url(../images/landing/errow-round-left.png);
+    top: 50%;
+    margin-top: -30px;
+    right: 0;
+    width: 96px;
+    height: 230px;
+  }
+
+  &--2::after {
+    background-image: url(../images/landing/errow-round-right.png);
+    top: 50%;
+    margin-top: -30px;
+    left: 0;
+    width: 96px;
+    height: 230px;
+  }
+
+  &--3::after {
+    background-image: url(../images/landing/errow-round-left.png);
+    top: 50%;
+    margin-top: 0;
+    right: 0;
+    width: 96px;
+    height: 230px;
+  }
+
+  &--4::after {
+    background-image: url(../images/landing/errow-round-right.png);
+    top: 50%;
+    margin-top: -30px;
+    left: 0;
+    width: 96px;
+    height: 230px;
+  }
+
+  &--5::after {
+    background-image: url(../images/landing/errow-round-left.png);
+    top: 50%;
+    margin-top: -30px;
+    right: 0;
+    margin-left: -30px;
+    width: 96px;
+    height: 230px;
+  }
+
+  &--6::after {
+    background-image: url(../images/landing/errow-round-right.png);
+    top: 50%;
+    margin-top: 0;
+    left: 0;
+    margin-left: -30px;
+    width: 96px;
+    height: 230px;
+  }
+
+  @media(min-width: 768px) {
+    &--1::after {
+      background-image: url(../images/landing/errow-round-left.png);
+      top: 50%;
+      margin-top: -30px;
+      right: 0;
+      margin-right: 0;
+      width: 96px;
+      height: 230px;
+    }
+
+    &--2::after {
+      background-image: url(../images/landing/errow-round-right.png);
+      top: 50%;
+      margin-top: -30px;
+      left: -30px;
+      margin-right: 0;
+      width: 96px;
+      height: 230px;
+    }
+
+    &--3::after {
+      background-image: url(../images/landing/errow-left.png);
+      top: 50%;
+      margin-top: 0;
+      left: 0;
+      margin-left: -30px;
+      width: 80px;
+      height: 60px;
+    }
+
+    &--4::after {
+      background-image: url(../images/landing/errow-round-right.png);
+      top: 50%;
+      margin-top: -30px;
+      left: 20%;
+      margin-left: 0;
+      width: 96px;
+      height: 230px;
+    }
+
+    &--5::after {
+      background-image: url(../images/landing/errow-round-left.png);
+      top: 50%;
+      margin-top: -30px;
+      right: 0;
+      margin-left: 0;
+      margin-right: -30px;
+      width: 96px;
+      height: 230px;
+    }
+
+    &--6::after {
+      background-image: url(../images/landing/errow-right.png);
+      top: 50%;
+      margin-top: 0;
+      right: 0;
+      left: inherit;
+      margin-right: -30px;
+      margin-left: 0;
+      width: 80px;
+      height: 60px;
+    }
+  }
+
+  @media(min-width: 992px) {
+    &--1::after {
+      background-image: url(../images/landing/errow-right.png);
+      top: 50%;
+      margin-top: -30px;
+      right: 0;
+      margin-right: -30px;
+      width: 80px;
+      height: 60px;
+    }
+
+    &--2::after {
+      background-image: url(../images/landing/errow-right.png);
+      top: 50%;
+      margin-top: -30px;
+      right: 0;
+      left: inherit;
+      margin-right: -30px;
+      width: 80px;
+      height: 60px;
+    }
+
+    &--3::after {
+      background-image: url(../images/landing/errow-round-left.png);
+      top: 50%;
+      margin-top: 0;
+      right: 0;
+      left: inherit;
+      margin-right: -30px;
+      width: 96px;
+      height: 230px;
+    }
+
+    &--4::after {
+      background-image: url(../images/landing/errow-left.png);
+      top: 50%;
+      margin-top: -30px;
+      left: 0;
+      margin-left: -30px;
+      width: 80px;
+      height: 60px;
+    }
+
+    &--5::after {
+      background-image: url(../images/landing/errow-left.png);
+      top: 50%;
+      margin-top: -30px;
+      left: 0;
+      margin-left: -30px;
+      width: 80px;
+      height: 60px;
+    }
+
+    &--6::after {
+      background-image: url(../images/landing/errow-round-right.png);
+      top: 50%;
+      margin-top: 0;
+      left: 0;
+      margin-left: -30px;
+      width: 96px;
+      height: 230px;
+    }
+  }
+}
+
+.carousel-indicators {
+  bottom: -40px!important;
+}
+
+.carousel-indicators li {
+  border-color: @color-orange;
+}
+
+.carousel-indicators .active {
+  background-color: @color-orange;
+}
+
+.nav > li {
+  color: @color-orange;
+}
