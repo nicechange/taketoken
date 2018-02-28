@@ -292,7 +292,36 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider) {
             url: "/profile",
             templateUrl: "views/app_views/profile.html",
             data: {
-                pageTitle: 'Profile',
+                pageTitle: 'Настройки профиля',
+                pageDesc: 'Show user data in clear profile design'
+            }
+        })
+        .state('app_views.dealings', {
+            url: "/dealings",
+            templateUrl: "views/app_views/dealings.html",
+            data: {
+                pageTitle: 'Сделки',
+                pageDesc: 'Show user data in clear profile design'
+            }
+        }).state('app_views.purse', {
+            url: "/purse",
+            templateUrl: "views/app_views/purse.html",
+            data: {
+                pageTitle: 'Кошельки',
+                pageDesc: 'Show user data in clear profile design'
+            }
+        }).state('app_views.alerts', {
+            url: "/alerts",
+            templateUrl: "views/app_views/alerts.html",
+            data: {
+                pageTitle: 'Настройки оповещений',
+                pageDesc: 'Show user data in clear profile design'
+            }
+        }).state('app_views.security', {
+            url: "/security",
+            templateUrl: "views/app_views/security.html",
+            data: {
+                pageTitle: 'Настройка безопасности',
                 pageDesc: 'Show user data in clear profile design'
             }
         })
@@ -713,6 +742,7 @@ angular
         $rootScope.$state = $state;
         editableOptions.theme = 'bs3';
     });
+
 /**
  *
  * propsFilter
