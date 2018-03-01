@@ -37,9 +37,9 @@
           <a ui-sref="app_views.dealings"> <span class="nav-label">Сделки</span></a>
       </li>
       <li ui-sref-active="active">
-          <a ui-sref="app_views.purse"> <span class="nav-label">Кошельки</span></a>
+          <a ui-sref="app_views.purse"> <i class="fa fa-lg fa-ruble"></i> <span class="nav-label">Кошельки</span></a>
       </li>
-      <li ui-sref-active="active">
+      <!-- <li ui-sref-active="active">
           <a ui-sref="app_views.profile"> <span class="nav-label">Настройка профиля</span></a>
       </li>
       <li ui-sref-active="active">
@@ -47,6 +47,14 @@
       </li>
       <li ui-sref-active="active">
           <a ui-sref="app_views.security"> <span class="nav-label">Настройка безопасность</span></a>
+      </li> -->
+      <li ng-class="{active: $state.includes('settings')}">
+          <a href="#"><span class="nav-label">Настройки</span><span class="fa arrow"></span> </a>
+          <ul class="nav nav-second-level" ng-class="{in: $state.includes('settings')}">
+              <li ui-sref-active="active"><a ui-sref="app_views.profile">Профиля</a></li>
+              <li ui-sref-active="active"><a ui-sref="app_views.alerts">Оповещений</a></li>
+              <li ui-sref-active="active"><a ui-sref="app_views.security">Безопасности</a></li>
+          </ul>
       </li>
 
 

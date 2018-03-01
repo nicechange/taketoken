@@ -188,14 +188,6 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider) {
                 pageDesc: 'Show users list in nice and color panels'
             }
         })
-        .state('app_views.profile', {
-            url: "/profile",
-            templateUrl: "views/app_views/profile.html",
-            data: {
-                pageTitle: 'Настройки профиля',
-                pageDesc: 'Show user data in clear profile design'
-            }
-        })
         .state('app_views.dealings', {
             url: "/dealings",
             templateUrl: "views/app_views/dealings.html",
@@ -203,23 +195,34 @@ function configState($stateProvider, $urlRouterProvider, $compileProvider) {
                 pageTitle: 'Сделки',
                 pageDesc: 'Show user data in clear profile design'
             }
-        }).state('app_views.purse', {
+        })
+        .state('app_views.purse', {
             url: "/purse",
             templateUrl: "views/app_views/purse.html",
             data: {
                 pageTitle: 'Кошельки',
                 pageDesc: 'Show user data in clear profile design'
             }
-        }).state('app_views.alerts', {
+        })
+        .state('app_views.profile', {
+            url: "/profile",
+            templateUrl: "views/settings/profile.html",
+            data: {
+                pageTitle: 'Настройки профиля',
+                pageDesc: 'Show user data in clear profile design'
+            }
+        })
+        .state('app_views.alerts', {
             url: "/alerts",
-            templateUrl: "views/app_views/alerts.html",
+            templateUrl: "views/settings/alerts.html",
             data: {
                 pageTitle: 'Настройки оповещений',
                 pageDesc: 'Show user data in clear profile design'
             }
-        }).state('app_views.security', {
+        })
+        .state('app_views.security', {
             url: "/security",
-            templateUrl: "views/app_views/security.html",
+            templateUrl: "views/settings/security.html",
             data: {
                 pageTitle: 'Настройка безопасности',
                 pageDesc: 'Show user data in clear profile design'
