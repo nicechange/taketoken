@@ -13,14 +13,23 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-                <li><a class="page-scroll" page-scroll href="#components">О сервисе</a></li>
-                <li><a class="page-scroll" page-scroll href="#features">Правила</a></li>
-                <li><a class="page-scroll" page-scroll href="app_views.forum_details">Форум</a></li>
-                <li><a class="page-scroll" page-scroll href="#pricing">Новости</a></li>
+                <li><a class="page-scroll" page-scroll ui-sref="app_views.faq">О сервисе</a></li>
+                <li><a class="page-scroll" page-scroll ui-sref="interface.tour">Правила</a></li>
+                <li><a class="page-scroll" page-scroll ui-sref="app_views.forum">Форум</a></li>
+                <li><a class="page-scroll" page-scroll ui-sref="app_views.blog">Новости</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="page-scroll" page-scroll ui-sref="common.register">Зарегистрироваться</a></li>
                 <li><a class="page-scroll" page-scroll ui-sref="common.login">Войти</a></li>
+                <li>
+                  <a class="page-scroll" page-scroll ui-sref="app_views.dealings">
+                    <i class="fa fa-lg pe-7s-user"></i>
+                    User number one
+                  </a>
+                </li>
+                <li>
+                  <a class="page-scroll" ui-sref="common.login">Выйти</i></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -39,38 +48,26 @@
                                 Покупка
                             </uib-tab-heading>
                             <div class="panel-body">
-                              <div class="row">
-                                <form method="get" class="form-horizontal">
-                                  <label class="col-md-1 control-label" for="buying-give">
-                                    Отдаете:
-                                  </label>
-                                  <div class="col-md-3 m-b">
-                                    <select class="form-control" name="account" id="buying-give">
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                    </select>
-                                  </div>
-                                  <div class="col-md-3 m-b">
-                                    <input type="text" class="form-control" placeholder="Сумма">
-                                  </div>
-                                  <label class="col-md-1 control-label" for="buying-get">
-                                    Получаете:
-                                  </label>
-                                  <div class="col-md-3 m-b">
-                                    <select class="form-control" name="account" id="buying-get">
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                    </select>
-                                  </div>
-                                  <div class="col-md-1">
-                                    <button class="btn btn-primary" type="submit">Поиск</button>
-                                  </div>
-                                </form>
-                              </div>
+                              <form method="get" class="form-horizontal form-flex">
+                                <label class="control-label flex-shrink-none m-r" for="buying-give">
+                                  Купить:
+                                </label>
+                                <select class="form-control m-r" name="account" id="buying-give">
+                                  <option>Биткоины</option>
+                                  <option>Эфир</option>
+                                </select>
+                                <input type="text" class="form-control m-r" placeholder="Сумма, Руб."id="buying-sum">
+                                <label class="control-label flex-shrink-none m-r" for="buying-get">
+                                  Cредство платежа:
+                                </label>
+                                <select class="form-control m-r" name="account" id="buying-get">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                </select>
+                                <button class="btn btn-primary" type="submit">Найти предложение</button>
+                              </form>
                             </div>
                         </uib-tab>
                         <uib-tab>
@@ -78,30 +75,25 @@
                                 Продажа
                             </uib-tab-heading>
                             <div class="panel-body">
-                                <div class="row">
-                                  <form method="get" class="form-horizontal">
-                                    <div class="col-lg-4">
-                                      <select class="form-control" name="account">
-                                          <option>option 1</option>
-                                          <option>option 2</option>
-                                          <option>option 3</option>
-                                          <option>option 4</option>
-                                      </select>
-                                    </div>
-                                    <div class="col-lg-3">
-                                      <input type="text" class="form-control" placeholder="Сумма">
-                                    </div>
-                                    <div class="col-lg-4">
-                                      <select class="form-control" name="account">
-                                          <option>option 1</option>
-                                          <option>option 2</option>
-                                          <option>option 3</option>
-                                          <option>option 4</option>
-                                      </select>
-                                    </div>
-                                    <div class="col-lg-1">
-                                      <button class="btn btn-primary" type="submit">Поиск</button>
-                                    </div>
+                                  <form method="get" class="form-horizontal form-flex">
+                                    <label class="control-label flex-shrink-none m-r" for="selling-give">
+                                      Продать:
+                                    </label>
+                                    <select class="form-control m-r" name="account" id="selling-give">
+                                      <option>Биткоины</option>
+                                      <option>Эфир</option>
+                                    </select>
+                                    <input type="text" class="form-control m-r" placeholder="Сумма"id="selling-sum">
+                                    <label class="control-label flex-shrink-none m-r" for="selling-get">
+                                      Инструмент оплаты:
+                                    </label>
+                                    <select class="form-control m-r" name="account" id="selling-get">
+                                      <option>option 1</option>
+                                      <option>option 2</option>
+                                      <option>option 3</option>
+                                      <option>option 4</option>
+                                    </select>
+                                    <button class="btn btn-primary" type="submit">Найти предложение</button>
                                   </form>
                                 </div>
                             </div>
@@ -114,6 +106,27 @@
 </header>
 <section>
   <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="hpanel horange">
+          <div class="panel-heading hbuilt">
+                Применен фильтр:
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-9">
+                <p>
+                  <span>Покупка</span> <span>Биткоинов</span> на сумму <span>100500Руб.</span> Средство платежа: <span>Банк Тинькофф</span>
+                </p>
+              </div>
+              <div class="col-lg-3 text-right">
+                <button class="btn btn-primary" type="submit">Сбросить фильтр</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="hpanel">
@@ -139,42 +152,42 @@
                             <td>Сбербанк онлайн</td>
                             <td>alberto<span class="m-l label label-success">Online</span></td>
                             <td>100,000 - 422,476RUB</td>
-                            <td><a class="btn btn-primary" href="#">Купить</a></td>
+                            <td class="text-right"><a class="btn btn-primary" href="#">Купить</a></td>
                         </tr>
                         <tr>
                           <td>566,000.00RUB</td>
                           <td>Альфа, Тинькофф</td>
                           <td>Big_gold</td>
                           <td>34,000 - 34,500RUB</td>
-                          <td><a class="btn btn-primary" href="#">Купить</a></td>
+                          <td class="text-right"><a class="btn btn-primary" href="#">Купить</a></td>
                         </tr>
                         <tr>
                           <td>567,000.00RUB</td>
                           <td>Тинькофф</td>
                           <td>Aidar</td>
                           <td>20,000 - 124,000RUB</td>
-                          <td><a class="btn btn-primary" href="#">Купить</a></td>
+                          <td class="text-right"><a class="btn btn-primary" href="#">Купить</a></td>
                         </tr>
                         <tr>
                             <td>564,856.52RUB</td>
                             <td>Сбербанк онлайн</td>
                             <td>alberto<span class="m-l label label-success">Online</span></td>
                             <td>100,000 - 422,476RUB</td>
-                            <td><a class="btn btn-primary" href="#">Купить</a></td>
+                            <td class="text-right"><a class="btn btn-primary" href="#">Купить</a></td>
                         </tr>
                         <tr>
                           <td>566,000.00RUB</td>
                           <td>Альфа, Тинькофф</td>
                           <td>Big_gold<span class="m-l label label-success">Online</span></td>
                           <td>34,000 - 34,500RUB</td>
-                          <td><a class="btn btn-primary" href="#">Купить</a></td>
+                          <td class="text-right"><a class="btn btn-primary" href="#">Купить</a></td>
                         </tr>
                         <tr>
                           <td>567,000.00RUB</td>
                           <td>Тинькофф</td>
                           <td>Aidar</td>
                           <td>20,000 - 124,000RUB</td>
-                          <td><a class="btn btn-primary">Купить</a></td>
+                          <td class="text-right"><a class="btn btn-primary">Купить</a></td>
                         </tr>
 
                         </tbody>
@@ -215,42 +228,42 @@
                             <td>Сбербанк онлайн</td>
                             <td>alberto</td>
                             <td>100,000 - 422,476RUB</td>
-                            <td><a class="btn btn-primary" href="#">Продать</a></td>
+                            <td class="text-right"><a class="btn btn-primary" href="#">Продать</a></td>
                         </tr>
                         <tr>
                           <td>566,000.00RUB</td>
                           <td>Альфа, Тинькофф</td>
                           <td>Big_gold<span class="m-l label label-success">Online</span></td>
                           <td>34,000 - 34,500RUB</td>
-                          <td><a class="btn btn-primary" href="#">Продать</a></td>
+                          <td class="text-right"><a class="btn btn-primary" href="#">Продать</a></td>
                         </tr>
                         <tr>
                           <td>567,000.00RUB</td>
                           <td>Тинькофф</td>
                           <td>Aidar</td>
                           <td>20,000 - 124,000RUB</td>
-                          <td><a class="btn btn-primary" href="#">Продать</a></td>
+                          <td class="text-right"><a class="btn btn-primary" href="#">Продать</a></td>
                         </tr>
                         <tr>
                             <td>564,856.52RUB</td>
                             <td>Сбербанк онлайн</td>
                             <td>alberto<span class="m-l label label-success">Online</span></td>
                             <td>100,000 - 422,476RUB</td>
-                            <td><a class="btn btn-primary" href="#">Продать</a></td>
+                            <td class="text-right"><a class="btn btn-primary" href="#">Продать</a></td>
                         </tr>
                         <tr>
                           <td>566,000.00RUB</td>
                           <td>Альфа, Тинькофф</td>
                           <td>Big_gold</td>
                           <td>34,000 - 34,500RUB</td>
-                          <td><a class="btn btn-primary" href="#">Продать</a></td>
+                          <td class="text-right"><a class="btn btn-primary" href="#">Продать</a></td>
                         </tr>
                         <tr>
                           <td>567,000.00RUB</td>
                           <td>Тинькофф</td>
                           <td>Aidar</td>
                           <td>20,000 - 124,000RUB</td>
-                          <td><a class="btn btn-primary">Продать</a></td>
+                          <td class="text-right"><a class="btn btn-primary">Продать</a></td>
                         </tr>
 
                         </tbody>
