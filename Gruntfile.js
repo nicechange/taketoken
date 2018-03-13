@@ -167,7 +167,7 @@ module.exports = function (grunt) {
                 src: [
                     '<%= homer.dist %>/scripts/{,*/}*.js',
                     '<%= homer.dist %>/styles/{,*/}*.css',
-                    '<%= homer.dist %>/styles/fonts/*'
+                    // '<%= homer.dist %>/styles/fonts/*'
                 ]
             }
         },
