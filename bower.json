@@ -20,7 +20,7 @@
     "jquery": "~2.2.0",
     "jquery-ui": "~1.11.1",
     "bootstrap": "~3.3.7",
-    "fontawesome": "~4.7.0",
+    "fontawesome": "5",
     "metisMenu": "~2.4.0",
     "jquery-flot": "~0.8.3",
     "angular-flot": "~0.0.6",
