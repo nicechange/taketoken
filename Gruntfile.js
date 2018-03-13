@@ -141,6 +141,13 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         dot: true,
+                        cwd: 'bower_components/footable/css',
+                        src: ['fonts/*.*'],
+                        dest: '<%= homer.dist %>/styles'
+                    },
+                    {
+                        expand: true,
+                        dot: true,
                         cwd: 'app/fonts/pe-icon-7-stroke/',
                         src: ['fonts/*.*'],
                         dest: '<%= homer.dist %>'
