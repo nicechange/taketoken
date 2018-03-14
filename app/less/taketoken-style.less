@@ -1,10 +1,15 @@
 .text-primary {color: @color-blue}
 .text-primary-2 {color: @color-orange}
 
+.bg-primary {
+  background-color: @color-blue;
+}
+
 .landing-page header {
   height: 200px;
   background-image: none;
   background-color: @color-blue;
+  margin-bottom: -156px;
 }
 
 .landing-page .navbar-nav>li>a {
@@ -283,6 +288,14 @@
 
 .nav > li {
   color: @color-orange;
+}
+footer .nav > li > a {
+  color: #ffffff;
+}
+
+footer .nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: @color-orange;
 }
 
 #logo {
